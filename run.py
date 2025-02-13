@@ -1,6 +1,6 @@
 import yaml
 
-from utils import generate_data, display_data
+from utils import generate_data, generate_one, display_data, display_one_colors
 
 def load_config(config_file="config.yaml"):
     with open(config_file, "r") as file:
@@ -13,9 +13,16 @@ def main():
   p = config['p']
   size = config['size']
   csv = config['csv']
+  csv2 = config['csv2']
+  csv3 = config['csv3']
   
   generate_data(p, size, num_samples,csv)
-  display_data(num_samples,csv)
+  generate_one(p, size, csv2,'a')
+  generate_one(p, size, csv3,'b')
+  
+  display_data(size,num_samples,csv)
+  display_one_colors(1000,num_samples,csv2,'a')
+  display_one_colors(1000,num_samples,csv3,'b')
 
 if __name__ == "__main__":
   main()
