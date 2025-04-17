@@ -1,0 +1,8 @@
+num_samples: 9
+p: 0.5
+size: 99999
+k: 50
+T: 20
+csv: "data/timeseries.csv"
+csv2: "data/two.csv"
+csv3: "data/three.csv"
